@@ -979,5 +979,25 @@
                 </section>
             </div>
         </div>
+         <script>
+  document.getElementById("myForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // чтобы страница не перезагружалась
+
+    const formData = new FormData(this);
+    let text = '';
+    for (let [key, value] of formData.entries()) {
+      text += `${key}: ${value}\n`;
+    }
+
+    const encodedText = encodeURIComponent(text);
+    const telegramURL = `https://api.telegram.org/bot8156232977:AAG_Yk2R2nKksdXu35VvDbTaSfztwIYPyrU/sendMessage?chat_id=6738451805&text=${encodedText}`;
+
+    fetch(telegramURL)
+      .then(response => alert("Заявка отправлена!"))
+      .catch(err => alert("Ошибка при отправке"));
+
+    this.reset(); // очистить форму
+  });
+  </script>
     </body>
 </html>
