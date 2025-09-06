@@ -335,53 +335,76 @@
             [hidden]:where(:not([hidden="until-found"])) {
                 display: none;
             }
-            #webcrumbs .absolute {
-                position: absolute;
+            .container {
+                width: 100%;
             }
-            #webcrumbs .relative {
-                position: relative;
+            @media (min-width: 640px) {
+                .container {
+                    max-width: 640px;
+                }
             }
-            #webcrumbs .-bottom-24 {
-                bottom: -96px;
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 768px;
+                }
             }
-            #webcrumbs .-left-24 {
-                left: -96px;
+            @media (min-width: 1024px) {
+                .container {
+                    max-width: 1024px;
+                }
             }
-            #webcrumbs .-right-20 {
-                right: -80px;
+            @media (min-width: 1280px) {
+                .container {
+                    max-width: 1280px;
+                }
             }
-            #webcrumbs .-top-20 {
-                top: -80px;
+            @media (min-width: 1536px) {
+                .container {
+                    max-width: 1536px;
+                }
             }
-            #webcrumbs .z-10 {
-                z-index: 10;
+            #webcrumbs .mx-auto {
+                margin-left: auto;
+                margin-right: auto;
             }
-            #webcrumbs .mb-1 {
-                margin-bottom: 4px;
+            #webcrumbs .mb-12 {
+                margin-bottom: 48px;
             }
             #webcrumbs .mb-2 {
                 margin-bottom: 8px;
             }
+            #webcrumbs .mb-3 {
+                margin-bottom: 12px;
+            }
             #webcrumbs .mb-4 {
                 margin-bottom: 16px;
+            }
+            #webcrumbs .mb-6 {
+                margin-bottom: 24px;
             }
             #webcrumbs .mb-8 {
                 margin-bottom: 32px;
             }
-            #webcrumbs .ml-3 {
-                margin-left: 12px;
+            #webcrumbs .mr-3 {
+                margin-right: 12px;
             }
             #webcrumbs .mr-4 {
                 margin-right: 16px;
             }
-            #webcrumbs .mt-12 {
-                margin-top: 48px;
+            #webcrumbs .mt-1 {
+                margin-top: 4px;
             }
-            #webcrumbs .mt-4 {
-                margin-top: 16px;
+            #webcrumbs .mt-6 {
+                margin-top: 24px;
+            }
+            #webcrumbs .mt-8 {
+                margin-top: 32px;
             }
             #webcrumbs .block {
                 display: block;
+            }
+            #webcrumbs .inline-block {
+                display: inline-block;
             }
             #webcrumbs .flex {
                 display: flex;
@@ -389,26 +412,14 @@
             #webcrumbs .grid {
                 display: grid;
             }
+            #webcrumbs .hidden {
+                display: none;
+            }
             #webcrumbs .h-10 {
                 height: 40px;
             }
-            #webcrumbs .h-32 {
-                height: 128px;
-            }
-            #webcrumbs .h-4 {
-                height: 16px;
-            }
-            #webcrumbs .h-40 {
-                height: 160px;
-            }
-            #webcrumbs .h-5 {
-                height: 20px;
-            }
-            #webcrumbs .h-64 {
-                height: 256px;
-            }
-            #webcrumbs .h-9 {
-                height: 36px;
+            #webcrumbs .h-24 {
+                height: 96px;
             }
             #webcrumbs .min-h-screen {
                 min-height: 100vh;
@@ -416,42 +427,27 @@
             #webcrumbs .w-10 {
                 width: 40px;
             }
-            #webcrumbs .w-4 {
-                width: 16px;
-            }
-            #webcrumbs .w-40 {
-                width: 160px;
-            }
-            #webcrumbs .w-64 {
-                width: 256px;
-            }
-            #webcrumbs .w-9 {
-                width: 36px;
-            }
             #webcrumbs .w-full {
                 width: 100%;
-            }
-            #webcrumbs .max-w-4xl {
-                max-width: 56rem;
             }
             #webcrumbs .transform {
                 transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
                     skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
             }
-            #webcrumbs .resize-none {
-                resize: none;
-            }
-            #webcrumbs .appearance-none {
-                appearance: none;
-            }
             #webcrumbs .grid-cols-1 {
                 grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            #webcrumbs .grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
             #webcrumbs .flex-row {
                 flex-direction: row;
             }
             #webcrumbs .flex-col {
                 flex-direction: column;
+            }
+            #webcrumbs .flex-wrap {
+                flex-wrap: wrap;
             }
             #webcrumbs .items-start {
                 align-items: flex-start;
@@ -465,16 +461,27 @@
             #webcrumbs .justify-between {
                 justify-content: space-between;
             }
+            #webcrumbs .justify-items-center {
+                justify-items: center;
+            }
+            #webcrumbs .gap-12 {
+                gap: 48px;
+            }
             #webcrumbs .gap-4 {
                 gap: 16px;
             }
-            #webcrumbs .gap-6 {
-                gap: 24px;
+            #webcrumbs .gap-8 {
+                gap: 32px;
             }
             #webcrumbs :is(.space-x-4 > :not([hidden]) ~ :not([hidden])) {
                 --tw-space-x-reverse: 0;
                 margin-left: calc(16px * (1 - var(--tw-space-x-reverse)));
                 margin-right: calc(16px * var(--tw-space-x-reverse));
+            }
+            #webcrumbs :is(.space-x-6 > :not([hidden]) ~ :not([hidden])) {
+                --tw-space-x-reverse: 0;
+                margin-left: calc(24px * (1 - var(--tw-space-x-reverse)));
+                margin-right: calc(24px * var(--tw-space-x-reverse));
             }
             #webcrumbs :is(.space-y-4 > :not([hidden]) ~ :not([hidden])) {
                 --tw-space-y-reverse: 0;
@@ -486,57 +493,72 @@
                 margin-bottom: calc(24px * var(--tw-space-y-reverse));
                 margin-top: calc(24px * (1 - var(--tw-space-y-reverse)));
             }
-            #webcrumbs .overflow-hidden {
-                overflow: hidden;
-            }
-            #webcrumbs .rounded {
-                border-radius: 12px;
-            }
-            #webcrumbs .rounded-2xl {
-                border-radius: 48px;
-            }
             #webcrumbs .rounded-full {
                 border-radius: 9999px;
             }
             #webcrumbs .rounded-lg {
                 border-radius: 24px;
             }
+            #webcrumbs .rounded-md {
+                border-radius: 18px;
+            }
             #webcrumbs .border {
                 border-width: 1px;
+            }
+            #webcrumbs .border-t {
+                border-top-width: 1px;
             }
             #webcrumbs .border-gray-300 {
                 --tw-border-opacity: 1;
                 border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
             }
-            #webcrumbs .bg-primary-500 {
-                --tw-bg-opacity: 1;
-                background-color: rgb(115 65 255 / var(--tw-bg-opacity, 1));
+            #webcrumbs .border-gray-800 {
+                --tw-border-opacity: 1;
+                border-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
             }
-            #webcrumbs .bg-primary-600 {
+            #webcrumbs .bg-blue-100 {
                 --tw-bg-opacity: 1;
-                background-color: rgb(99 27 255 / var(--tw-bg-opacity, 1));
+                background-color: rgb(219 234 254 / var(--tw-bg-opacity, 1));
             }
-            #webcrumbs .bg-primary-700 {
+            #webcrumbs .bg-blue-600 {
                 --tw-bg-opacity: 1;
-                background-color: rgb(97 27 248 / var(--tw-bg-opacity, 1));
+                background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+            }
+            #webcrumbs .bg-blue-700 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
+            }
+            #webcrumbs .bg-gray-50 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+            }
+            #webcrumbs .bg-gray-900 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
             }
             #webcrumbs .bg-white {
                 --tw-bg-opacity: 1;
                 background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
             }
-            #webcrumbs .bg-gradient-to-br {
-                background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+            #webcrumbs .bg-gradient-to-r {
+                background-image: linear-gradient(to right, var(--tw-gradient-stops));
             }
-            #webcrumbs .from-blue-50 {
-                --tw-gradient-from: #eff6ff var(--tw-gradient-from-position);
-                --tw-gradient-to: rgba(239, 246, 255, 0) var(--tw-gradient-to-position);
+            #webcrumbs .from-blue-600 {
+                --tw-gradient-from: #2563eb var(--tw-gradient-from-position);
+                --tw-gradient-to: rgba(37, 99, 235, 0) var(--tw-gradient-to-position);
                 --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
             }
-            #webcrumbs .to-indigo-50 {
-                --tw-gradient-to: #eef2ff var(--tw-gradient-to-position);
+            #webcrumbs .to-blue-800 {
+                --tw-gradient-to: #1e40af var(--tw-gradient-to-position);
             }
-            #webcrumbs .p-4 {
-                padding: 16px;
+            #webcrumbs .p-2 {
+                padding: 8px;
+            }
+            #webcrumbs .p-3 {
+                padding: 12px;
+            }
+            #webcrumbs .p-6 {
+                padding: 24px;
             }
             #webcrumbs .p-8 {
                 padding: 32px;
@@ -549,9 +571,24 @@
                 padding-left: 24px;
                 padding-right: 24px;
             }
+            #webcrumbs .py-16 {
+                padding-bottom: 64px;
+                padding-top: 64px;
+            }
+            #webcrumbs .py-2 {
+                padding-bottom: 8px;
+                padding-top: 8px;
+            }
             #webcrumbs .py-3 {
                 padding-bottom: 12px;
                 padding-top: 12px;
+            }
+            #webcrumbs .py-8 {
+                padding-bottom: 32px;
+                padding-top: 32px;
+            }
+            #webcrumbs .pt-6 {
+                padding-top: 24px;
             }
             #webcrumbs .text-center {
                 text-align: center;
@@ -564,15 +601,31 @@
                 font-size: 30px;
                 line-height: 36px;
             }
-            #webcrumbs .text-sm {
-                font-size: 14px;
-                line-height: 21px;
+            #webcrumbs .text-4xl {
+                font-size: 36px;
+                line-height: 41.4px;
+            }
+            #webcrumbs .text-xl {
+                font-size: 20px;
+                line-height: 28px;
             }
             #webcrumbs .font-bold {
                 font-weight: 700;
             }
-            #webcrumbs .font-medium {
-                font-weight: 500;
+            #webcrumbs .font-semibold {
+                font-weight: 600;
+            }
+            #webcrumbs .text-blue-100 {
+                --tw-text-opacity: 1;
+                color: rgb(219 234 254 / var(--tw-text-opacity, 1));
+            }
+            #webcrumbs .text-blue-700 {
+                --tw-text-opacity: 1;
+                color: rgb(29 78 216 / var(--tw-text-opacity, 1));
+            }
+            #webcrumbs .text-gray-400 {
+                --tw-text-opacity: 1;
+                color: rgb(156 163 175 / var(--tw-text-opacity, 1));
             }
             #webcrumbs .text-gray-500 {
                 --tw-text-opacity: 1;
@@ -590,75 +643,78 @@
                 --tw-text-opacity: 1;
                 color: rgb(31 41 55 / var(--tw-text-opacity, 1));
             }
-            #webcrumbs .text-primary-600 {
-                --tw-text-opacity: 1;
-                color: rgb(99 27 255 / var(--tw-text-opacity, 1));
-            }
             #webcrumbs .text-white {
                 --tw-text-opacity: 1;
                 color: rgb(255 255 255 / var(--tw-text-opacity, 1));
             }
-            #webcrumbs .opacity-20 {
-                opacity: 0.2;
+            #webcrumbs .shadow-lg {
+                --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+                --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
             }
-            #webcrumbs .opacity-80 {
-                opacity: 0.8;
+            #webcrumbs .shadow-lg,
+            #webcrumbs .shadow-md {
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
             }
-            #webcrumbs .opacity-90 {
-                opacity: 0.9;
+            #webcrumbs .shadow-md {
+                --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+                --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
             }
             #webcrumbs .shadow-xl {
                 --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
                 --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
                 box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
             }
-            #webcrumbs .outline-none {
-                outline: 2px solid transparent;
-                outline-offset: 2px;
-            }
-            #webcrumbs .transition-all {
+            #webcrumbs .transition-colors {
                 transition-duration: 0.15s;
-                transition-property: all;
+                transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            #webcrumbs .transition-shadow {
+                transition-duration: 0.15s;
+                transition-property: box-shadow;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            #webcrumbs .duration-300 {
+                transition-duration: 0.3s;
             }
             #webcrumbs {
                 font-family: Open Sans !important;
                 font-size: 16px !important;
             }
-            #webcrumbs :is(.bg-primary-500) {
-                color: hsla(0, 0%, 100%, 0.9) !important;
-            }
-            #webcrumbs :is(.bg-primary-600) {
-                color: hsla(0, 0%, 100%, 0.9) !important;
-            }
-            #webcrumbs :is(.bg-primary-700) {
-                color: hsla(0, 0%, 100%, 0.9) !important;
-            }
-            #webcrumbs .hover\:-translate-y-0\.5:hover {
-                --tw-translate-y: -2px;
+            #webcrumbs .hover\:scale-105:hover {
+                --tw-scale-x: 1.05;
+                --tw-scale-y: 1.05;
                 transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
                     skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
             }
-            #webcrumbs .hover\:bg-primary-400:hover {
+            #webcrumbs .hover\:bg-blue-100:hover {
                 --tw-bg-opacity: 1;
-                background-color: rgb(148 120 255 / var(--tw-bg-opacity, 1));
+                background-color: rgb(219 234 254 / var(--tw-bg-opacity, 1));
             }
-            #webcrumbs .hover\:bg-primary-700:hover {
+            #webcrumbs .hover\:bg-blue-500:hover {
                 --tw-bg-opacity: 1;
-                background-color: rgb(97 27 248 / var(--tw-bg-opacity, 1));
+                background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
             }
-            #webcrumbs .hover\:text-primary-500:hover {
+            #webcrumbs .hover\:bg-blue-600:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+            }
+            #webcrumbs .hover\:text-blue-200:hover {
                 --tw-text-opacity: 1;
-                color: rgb(115 65 255 / var(--tw-text-opacity, 1));
+                color: rgb(191 219 254 / var(--tw-text-opacity, 1));
+            }
+            #webcrumbs .hover\:text-blue-400:hover {
+                --tw-text-opacity: 1;
+                color: rgb(96 165 250 / var(--tw-text-opacity, 1));
             }
             #webcrumbs .hover\:shadow-lg:hover {
                 --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
                 --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
                 box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
             }
-            #webcrumbs .focus\:border-primary-500:focus {
-                --tw-border-opacity: 1;
-                border-color: rgb(115 65 255 / var(--tw-border-opacity, 1));
+            #webcrumbs .focus\:outline-none:focus {
+                outline: 2px solid transparent;
+                outline-offset: 2px;
             }
             #webcrumbs .focus\:ring-2:focus {
                 --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width)
@@ -667,26 +723,53 @@
                     var(--tw-ring-color);
                 box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
             }
-            #webcrumbs .focus\:ring-primary-200:focus {
+            #webcrumbs .focus\:ring-blue-500:focus {
                 --tw-ring-opacity: 1;
-                --tw-ring-color: rgb(213 207 255 / var(--tw-ring-opacity, 1));
-            }
-            #webcrumbs .focus\:ring-primary-500:focus {
-                --tw-ring-opacity: 1;
-                --tw-ring-color: rgb(115 65 255 / var(--tw-ring-opacity, 1));
+                --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1));
             }
             @media (min-width: 768px) {
-                #webcrumbs .md\:w-2\/5 {
-                    width: 40%;
+                #webcrumbs .md\:mb-0 {
+                    margin-bottom: 0;
                 }
-                #webcrumbs .md\:w-3\/5 {
-                    width: 60%;
+                #webcrumbs .md\:flex {
+                    display: flex;
+                }
+                #webcrumbs .md\:hidden {
+                    display: none;
+                }
+                #webcrumbs .md\:w-1\/2 {
+                    width: 50%;
                 }
                 #webcrumbs .md\:grid-cols-2 {
                     grid-template-columns: repeat(2, minmax(0, 1fr));
                 }
+                #webcrumbs .md\:grid-cols-3 {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
                 #webcrumbs .md\:flex-row {
                     flex-direction: row;
+                }
+                #webcrumbs .md\:items-center {
+                    align-items: center;
+                }
+                #webcrumbs .md\:justify-between {
+                    justify-content: space-between;
+                }
+                #webcrumbs .md\:py-24 {
+                    padding-bottom: 96px;
+                    padding-top: 96px;
+                }
+                #webcrumbs .md\:text-5xl {
+                    font-size: 48px;
+                    line-height: 52.800000000000004px;
+                }
+            }
+            @media (min-width: 1024px) {
+                #webcrumbs .lg\:grid-cols-3 {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
+                #webcrumbs .lg\:grid-cols-6 {
+                    grid-template-columns: repeat(6, minmax(0, 1fr));
                 }
             }
         </style>
@@ -709,170 +792,324 @@
     </head>
     <body>
         <div id="webcrumbs">
-            <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-4">
-                <div class="w-full max-w-4xl bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-                    <div class="bg-primary-600 text-white p-8 md:w-2/5 relative overflow-hidden">
+            <div class="bg-white min-h-screen">
+                <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 md:py-24">
+                    <div class="container mx-auto px-4">
+                        <nav class="flex justify-between items-center mb-12">
+                            <div class="text-2xl font-bold">ConsultingPro</div>
+                            <div class="hidden md:flex space-x-6">
+                                <a href="#services" class="hover:text-blue-200 transition-colors">Услуги</a>
+                                <a href="#benefits" class="hover:text-blue-200 transition-colors">Преимущества</a>
+                                <a href="#clients" class="hover:text-blue-200 transition-colors">Клиенты</a>
+                                <a href="#contact" class="hover:text-blue-200 transition-colors">Контакты</a>
+                            </div>
+                            <button class="md:hidden"><span class="material-symbols-outlined">menu</span></button>
+                        </nav>
+                        <div class="md:flex md:items-center md:justify-between">
+                            <div class="md:w-1/2 mb-8 md:mb-0">
+                                <h1 class="text-4xl md:text-5xl font-bold mb-4">Автоматизация бизнес-процессов</h1>
+                                <p class="text-xl mb-6">
+                                    Более 2 лет успешных внедрений AMOCRM, Wazzup, IP-телефонии и других
+                                    бизнес-инструментов
+                                </p>
+                                <a
+                                    href="#contact"
+                                    class="inline-block bg-white text-blue-700 font-semibold px-6 py-3 rounded-full hover:bg-blue-100 transition-colors transform hover:scale-105 duration-300"
+                                    >Оставить заявку</a
+                                >
+                            </div>
+                            <div class="md:w-1/2">
+                                <img
+                                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&amp;w=2940&amp;auto=format&amp;fit=crop"
+                                    alt="Business consulting"
+                                    class="rounded-lg shadow-xl"
+                                    keywords="business consulting, office, teamwork"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section id="services" class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4">
+                        <h2 class="text-3xl font-bold mb-12 text-center">Наши услуги</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div class="bg-blue-100 text-blue-700 p-3 rounded-full inline-block mb-4">
+                                    <span class="material-symbols-outlined">sync</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Внедрение AMOCRM</h3>
+                                <p class="text-gray-600">
+                                    Настройка CRM-системы под ваш бизнес, интеграции, обучение персонала и техническая
+                                    поддержка.
+                                </p>
+                            </div>
+                            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div class="bg-blue-100 text-blue-700 p-3 rounded-full inline-block mb-4">
+                                    <span class="material-symbols-outlined">chat</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Интеграция Wazzup</h3>
+                                <p class="text-gray-600">
+                                    Настройка многоканальных коммуникаций с клиентами через популярные мессенджеры в
+                                    едином окне.
+                                </p>
+                            </div>
+                            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div class="bg-blue-100 text-blue-700 p-3 rounded-full inline-block mb-4">
+                                    <span class="material-symbols-outlined">landscape</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">IP-телефония</h3>
+                                <p class="text-gray-600">
+                                    Внедрение современных телефонных решений для бизнеса с интеграцией в CRM-систему.
+                                </p>
+                            </div>
+                            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div class="bg-blue-100 text-blue-700 p-3 rounded-full inline-block mb-4">
+                                    <span class="material-symbols-outlined">integration_instructions</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Интеграции</h3>
+                                <p class="text-gray-600">
+                                    Объединение различных бизнес-инструментов в единую экосистему для эффективной
+                                    работы.
+                                </p>
+                            </div>
+                            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div class="bg-blue-100 text-blue-700 p-3 rounded-full inline-block mb-4">
+                                    <span class="material-symbols-outlined">school</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Обучение персонала</h3>
+                                <p class="text-gray-600">
+                                    Подготовка сотрудников к эффективной работе с внедренными системами и инструментами.
+                                </p>
+                            </div>
+                            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div class="bg-blue-100 text-blue-700 p-3 rounded-full inline-block mb-4">
+                                    <span class="material-symbols-outlined">support_agent</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Техническая поддержка</h3>
+                                <p class="text-gray-600">
+                                    Постоянное сопровождение и помощь в решении технических вопросов после внедрения.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="benefits" class="py-16">
+                    <div class="container mx-auto px-4">
+                        <h2 class="text-3xl font-bold mb-12 text-center">Наши преимущества</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <img
+                                    src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&amp;w=2787&amp;auto=format&amp;fit=crop"
+                                    alt="Business benefits"
+                                    class="rounded-lg shadow-xl"
+                                    keywords="business success, teamwork, benefits"
+                                />
+                            </div>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 text-blue-700 p-2 rounded-full mr-4 mt-1">
+                                        <span class="material-symbols-outlined">check_circle</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2">Опыт более 2 лет</h3>
+                                        <p class="text-gray-600">
+                                            Мы успешно реализовали десятки проектов внедрения бизнес-инструментов в
+                                            компаниях различных отраслей.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 text-blue-700 p-2 rounded-full mr-4 mt-1">
+                                        <span class="material-symbols-outlined">check_circle</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2">Индивидуальный подход</h3>
+                                        <p class="text-gray-600">
+                                            Разрабатываем и внедряем решения с учетом специфики и потребностей именно
+                                            вашего бизнеса.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 text-blue-700 p-2 rounded-full mr-4 mt-1">
+                                        <span class="material-symbols-outlined">check_circle</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2">Комплексное решение</h3>
+                                        <p class="text-gray-600">
+                                            Предлагаем не просто внедрение отдельных инструментов, а создание целостной
+                                            бизнес-системы.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 text-blue-700 p-2 rounded-full mr-4 mt-1">
+                                        <span class="material-symbols-outlined">check_circle</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2">Поддержка 24/7</h3>
+                                        <p class="text-gray-600">
+                                            Оказываем техническую поддержку и консультации в любое время суток.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="clients" class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4">
+                        <h2 class="text-3xl font-bold mb-12 text-center">Нам доверяют</h2>
                         <div
-                            class="absolute -bottom-24 -left-24 w-64 h-64 rounded-full bg-primary-500 opacity-20"
-                        ></div>
-                        <div class="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-primary-700 opacity-20"></div>
-                        <h2 class="text-3xl font-bold mb-4 relative z-10">Get in Touch</h2>
-                        <p class="mb-8 opacity-90 relative z-10">
-                            We&#x27;d love to hear from you. Fill out the form and our team will get back to you as soon
-                            as possible.
-                        </p>
-                        <div class="space-y-4 relative z-10">
-                            <div class="flex items-center">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center mr-4"
-                                >
-                                    <span class="material-symbols-outlined">location_on</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-medium">Our Location</h3>
-                                    <p class="text-sm opacity-80">123 Business Avenue, Suite 200</p>
-                                </div>
+                            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center"
+                        >
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-24 flex items-center justify-center"
+                            >
+                                <div class="text-gray-500 font-bold text-xl">Компания 1</div>
                             </div>
-                            <div class="flex items-center">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center mr-4"
-                                >
-                                    <span class="material-symbols-outlined">mail</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-medium">Email Us</h3>
-                                    <p class="text-sm opacity-80">contact@company.com</p>
-                                </div>
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-24 flex items-center justify-center"
+                            >
+                                <div class="text-gray-500 font-bold text-xl">Компания 2</div>
                             </div>
-                            <div class="flex items-center">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center mr-4"
-                                >
-                                    <span class="material-symbols-outlined">call</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-medium">Call Us</h3>
-                                    <p class="text-sm opacity-80">+1 (555) 123-4567</p>
-                                </div>
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-24 flex items-center justify-center"
+                            >
+                                <div class="text-gray-500 font-bold text-xl">Компания 3</div>
                             </div>
-                        </div>
-                        <div class="mt-12 flex space-x-4 relative z-10">
-                            <a
-                                href="#"
-                                class="w-9 h-9 rounded-full bg-primary-500 hover:bg-primary-400 transition-all flex items-center justify-center"
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-24 flex items-center justify-center"
                             >
-                                <i class="fa-brands fa-twitter text-sm"></i>
-                            </a>
-                            <a
-                                href="#"
-                                class="w-9 h-9 rounded-full bg-primary-500 hover:bg-primary-400 transition-all flex items-center justify-center"
+                                <div class="text-gray-500 font-bold text-xl">Компания 4</div>
+                            </div>
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-24 flex items-center justify-center"
                             >
-                                <i class="fa-brands fa-facebook text-sm"></i>
-                            </a>
-                            <a
-                                href="#"
-                                class="w-9 h-9 rounded-full bg-primary-500 hover:bg-primary-400 transition-all flex items-center justify-center"
+                                <div class="text-gray-500 font-bold text-xl">Компания 5</div>
+                            </div>
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-24 flex items-center justify-center"
                             >
-                                <i class="fa-brands fa-instagram text-sm"></i>
-                            </a>
-                            <a
-                                href="#"
-                                class="w-9 h-9 rounded-full bg-primary-500 hover:bg-primary-400 transition-all flex items-center justify-center"
-                            >
-                                <i class="fa-brands fa-linkedin-in text-sm"></i>
-                            </a>
+                                <div class="text-gray-500 font-bold text-xl">Компания 6</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-8 md:w-3/5">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Send us a message</h3>
-                        <p class="text-gray-600 mb-8">Fill out the form below to start the conversation</p>
-                        <form class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                                    <input
-                                        type="text"
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none"
-                                        placeholder="John"
-                                    />
+                </section>
+                <section id="contact" class="py-16 bg-blue-700 text-white">
+                    <div class="container mx-auto px-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div>
+                                <h2 class="text-3xl font-bold mb-6">Свяжитесь с нами</h2>
+                                <p class="mb-8 text-blue-100">
+                                    Оставьте заявку, и мы проконсультируем вас по вопросам автоматизации
+                                    бизнес-процессов.
+                                </p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-outlined mr-3">location_on</span>
+                                        <span>г. Москва, ул. Примерная, д. 123</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-outlined mr-3">phone</span>
+                                        <span>+7 (999) 123-45-67</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-outlined mr-3">mail</span>
+                                        <span>info@consultingpro.ru</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                                    <input
-                                        type="text"
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none"
-                                        placeholder="Doe"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                                <input
-                                    type="email"
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none"
-                                    placeholder="johndoe@example.com"
-                                />
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone (optional)</label>
-                                <input
-                                    type="tel"
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none"
-                                    placeholder="+1 (555) 000-0000"
-                                />
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">How can we help you?</label>
-                                <select
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none appearance-none bg-white"
-                                >
-                                    <option value="" disabled="" selected="">Select an option</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="support">Technical Support</option>
-                                    <option value="sales">Sales</option>
-                                    <option value="partnership">Partnership</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                <textarea
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none h-32 resize-none"
-                                    placeholder="Tell us what you need help with..."
-                                ></textarea>
-                            </div>
-                            <div class="flex items-start mb-4">
-                                <div class="flex items-center h-5">
-                                    <input
-                                        id="terms"
-                                        type="checkbox"
-                                        class="h-4 w-4 text-primary-600 rounded border-gray-300 focus:ring-primary-500"
-                                    />
-                                </div>
-                                <div class="ml-3 text-sm">
-                                    <label for="terms" class="text-gray-600"
-                                        >I agree to the
-                                        <a href="#" class="text-primary-600 hover:text-primary-500">Terms of Service</a>
-                                        and
-                                        <a href="#" class="text-primary-600 hover:text-primary-500">Privacy Policy</a
-                                        >.</label
+                                <div class="mt-8 flex space-x-4">
+                                    <a
+                                        href="#"
+                                        class="bg-blue-600 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-colors"
                                     >
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        class="bg-blue-600 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+                                    >
+                                        <i class="fa-brands fa-telegram"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        class="bg-blue-600 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+                                    >
+                                        <i class="fa-brands fa-vk"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        class="bg-blue-600 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+                                    >
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
                                 </div>
                             </div>
                             <div>
-                                <button
-                                    type="submit"
-                                    class="w-full bg-primary-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-primary-700 transition-all transform hover:-translate-y-0.5 hover:shadow-lg"
-                                >
-                                    Send Message
-                                </button>
+                                <form class="bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                                    <div class="mb-4">
+                                        <label for="name" class="block text-gray-700 mb-2">Ваше имя</label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        />
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="phone" class="block text-gray-700 mb-2">Телефон</label>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        />
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="company" class="block text-gray-700 mb-2">Компания</label>
+                                        <input
+                                            type="text"
+                                            id="company"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        />
+                                    </div>
+                                    <div class="mb-6">
+                                        <label for="comment" class="block text-gray-700 mb-2">Комментарий</label>
+                                        <textarea
+                                            id="comment"
+                                            rows="4"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        ></textarea>
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        class="w-full bg-blue-700 text-white py-3 px-6 rounded-md hover:bg-blue-600 transition-colors transform hover:scale-105 duration-300"
+                                    >
+                                        Отправить заявку
+                                    </button>
+                                </form>
                             </div>
-                            <p class="text-sm text-center text-gray-500 mt-4">
-                                We&#x27;ll get back to you within 24-48 hours.
-                            </p>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </section>
+                <footer class="bg-gray-900 text-white py-8">
+                    <div class="container mx-auto px-4">
+                        <div class="flex flex-col md:flex-row justify-between items-center">
+                            <div class="mb-4 md:mb-0">
+                                <div class="text-2xl font-bold mb-2">ConsultingPro</div>
+                                <p class="text-gray-400">Автоматизация бизнес-процессов с 2021 года</p>
+                            </div>
+                            <div class="flex flex-wrap justify-center gap-4">
+                                <a href="#services" class="hover:text-blue-400 transition-colors">Услуги</a>
+                                <a href="#benefits" class="hover:text-blue-400 transition-colors">Преимущества</a>
+                                <a href="#clients" class="hover:text-blue-400 transition-colors">Клиенты</a>
+                                <a href="#contact" class="hover:text-blue-400 transition-colors">Контакты</a>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-500">
+                            <p>© 2023 ConsultingPro. Все права защищены.</p>
+                        </div>
+                    </div>
+                </footer>
             </div>
         </div>
     </body>
